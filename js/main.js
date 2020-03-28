@@ -90,10 +90,12 @@ function dialANum(a, b, c) {
 // take the string, use the dictionary on every character
 // ignore characters not in the hash or dictionary
 // print the message in id = answerArea
+
 function startDecode() {
   // generate hash first
   const alphaHash = generateHash(dials[0].value, dials[1].value, dials[2].value)
   // const alphaHash = generateHash(0, 0, 0)
+  const numHash = generateNumHash(dials[0].value, dials[1].value, dials[2].value)
 
   // grab our message
   const message = msg.value
@@ -102,8 +104,11 @@ function startDecode() {
   // go through the message character by character
   for (let i = 0; i < message.length; i++) {
     // if the i-th character is in the hash table, add coded character to the newMessage
-    if (alphaHash[message[i]]) {
-      newMessage += alphaHash[message[i]]
+    if (alphaHash[message[i].toLowerCase()]) {
+      newMessage += alphaHash[message[i].toLowerCase()]
+    } else if (numHash[message[i]]) {
+      // if it's a character in the numerical hash, add coded character to newMessage
+      newMessage += numHash[message[i]]
     } else {
       // if not in the hash, just add the character
       newMessage += message[i]
@@ -197,6 +202,61 @@ function generateHash(a, b, c) {
     rand = pairSet.shift() % pairIndex
     let letter2 = tempAlphabet[rand]
     tempAlphabet.splice(rand, 1) // splice one element starting at rand
+
+
+    hash[letter1] = letter2
+    hash[letter2] = letter1
+  }
+
+  console.log(hash)
+  return hash
+
+}
+
+function generateNumHash(a, b, c) {
+  // put in a quick dummy hash (doesn't even encode) for 0,0,0
+  if (a == 0 && b == 0 && c == 0) {
+    let hash = {}
+    for (let i = 0; i < 10; i++) {
+      hash[i.toString()] = i.toString()
+    }
+    return hash
+  }
+
+  let numList = []
+
+  for (let i = 0; i < 10; i++) {
+    numList.push(i.toString())
+  }
+
+  // dial values are a,b,c
+  let pairSet = randPairs(dialANum(a, b, c), 10)
+
+
+  // each 2 digit number may very well be from 0 to 99
+  // but we use modulus to make it between 0 and whichever number
+  // however, as pairSet will shrink over time, we will run modulus on its length instead
+
+  let hash = {}
+
+  let pairIndex = pairSet.length
+  console.log(pairSet)
+  while (pairSet.length > 0) {
+    // during each loop, pick 2 letters, set up pair of key: values
+    // splice them from numList
+
+    // random number is made with modulus of the length of pairSet
+    // to capture a number inside the array
+    pairIndex = pairSet.length
+    let rand = pairSet.shift() % pairIndex
+    let letter1 = numList[rand]
+    numList.splice(rand, 1) // splice one element starting at rand
+
+
+    pairIndex = pairSet.length
+    rand = pairSet.shift() % pairIndex
+    let letter2 = numList[rand]
+    numList.splice(rand, 1) // splice one element starting at rand
 
 
     hash[letter1] = letter2
