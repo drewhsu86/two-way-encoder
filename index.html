@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title> Send Secret Messages! </title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <script defer src="calculator.js"></script>  -->
+  <!-- <script defer src="letterGuesser.js"></script>  -->
+  <!-- <script defer src="madlibs.js"></script> -->
+  <script defer src="js/main.js"></script>
+
+</head>
+​
+<div>
+
+  <form class="formArea">
+
+    <label for="msg" class="formText">Please enter your un-encoded message.</label> <br>
+    <br>
+    <input class="inputText" id="msg" name="msg" type="text" value="Example: encode this sentence!"> <br>
+    <br>
+    <br>
+
+    Set your encoder values (single digit for each): <br>
+    <br>
+
+    <input class="dialBox" type="number" id="dial1" name="dial1" value="0" onchange="checkDials()">
+
+
+    <input class="dialBox" type="number" id="dial2" name="dial2" value="0" onchange="checkDials()">
+
+
+    <input class="dialBox" type="number" id="dial3" name="dial3" value="0" onchange="checkDials()">
+
+    <br><br>
+
+    <div class="answerArea" id="answerArea">
+      Your message will decode here
+    </div>
+
+    <br>
+
+    <div>
+      But the real trick is - <br>
+      This encoder works forwards and backwards! <br>
+      (B.T.W. 0-0-0 does not encode) <br>
+    </div>
+
+    <br>
+
+    <button class="startButton" id="startButton" name="startButton"> Encode! </button>
+
+  </form>
+
+</div>
+
+<body>
+  ​
+</body>
+​
+
+</html>

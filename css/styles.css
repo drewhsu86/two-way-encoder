@@ -1,0 +1,42 @@
+.answerArea {
+  background-color: greenyellow;
+  color: brown;
+}
+
+.formArea {
+  background-color: grey;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 22px;
+  color: white;
+  font-family: Courier;
+  font-weight: bold;
+  padding: 2%;
+}
+
+.formText {
+  font-size: 22px;
+}
+
+.inputText {
+  font-size: 22px;
+  width: 80%;
+  height: 28px;
+  padding: 5px;
+}
+
+.dialBox {
+  font-family: Courier;
+  font-size: 28px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+.startButton {
+  font-family: Courier;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 5px;
+}
