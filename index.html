@@ -2,67 +2,69 @@
 <html lang="en">
 ​
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title> Send Secret Messages! </title>
-  <link rel="stylesheet" href="css/styles.css">
-  <!-- <script defer src="calculator.js"></script>  -->
-  <!-- <script defer src="letterGuesser.js"></script>  -->
-  <!-- <script defer src="madlibs.js"></script> -->
-  <script defer src="js/main.js"></script>
+<body link="white" vlink="white">
 
-</head>
-​
-<div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Send Secret Messages! </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <script defer src="calculator.js"></script>  -->
+    <!-- <script defer src="letterGuesser.js"></script>  -->
+    <!-- <script defer src="madlibs.js"></script> -->
+    <script defer src="js/main.js"></script>
 
-  <form class="formArea">
+  </head>
+  ​
+  <div>
 
-    <label for="msg" class="formText">Please enter your un-encoded message.</label> <br>
-    <br>
-    <input class="inputText" id="msg" name="msg" type="text" value="Example: encode this sentence!"> <br>
-    <br>
-    <br>
+    <form class="formArea">
 
-    Set your encoder values (single digit for each): <br>
-    <br>
+      <label for="msg" class="formText">Please enter your un-encoded message.</label> <br>
+      <br>
+      <input class="inputText" id="msg" name="msg" type="text" value="Example: encode this sentence!"> <br>
+      <br>
+      <br>
 
-    <input class="dialBox" type="number" id="dial1" name="dial1" value="0" onchange="checkDials()">
+      Set your encoder values (single digit for each): <br>
+      <br>
+
+      <input class="dialBox" type="number" id="dial1" name="dial1" value="0" onchange="checkDials()">
 
 
-    <input class="dialBox" type="number" id="dial2" name="dial2" value="0" onchange="checkDials()">
+      <input class="dialBox" type="number" id="dial2" name="dial2" value="0" onchange="checkDials()">
 
 
-    <input class="dialBox" type="number" id="dial3" name="dial3" value="0" onchange="checkDials()">
+      <input class="dialBox" type="number" id="dial3" name="dial3" value="0" onchange="checkDials()">
 
-    <br><br>
+      <br><br>
 
-    <div class="answerArea" id="answerArea">
-      result will be shown here
-    </div>
+      <div class="answerArea" id="answerArea">
+        result will be shown here
+      </div>
 
-    <br>
+      <br>
 
-    <div>
-      But the real trick is - <br>
-      This encoder works forwards and backwards! <br>
-      (B.T.W. 0-0-0 does not encode) <br>
-    </div>
+      <div>
+        But the real trick is - <br>
+        This encoder works forwards and backwards! <br>
+        (B.T.W. 0-0-0 does not encode) <br>
+      </div>
 
-    <br>
+      <br>
 
-    <button class="startButton" id="startButton" name="startButton"> Encode! </button>
+      <button class="startButton" id="startButton" name="startButton"> Encode! </button>
 
-  </form>
+    </form>
 
-</div>
+  </div>
 
-<div class="hardToSee">
-  <a href="https://git.generalassemb.ly/drewhsu86/secret-encoder" target="_blank">0 0 0</a>
-</div>
+  <div class="hardToSee">
+    <a href="https://git.generalassemb.ly/drewhsu86/secret-encoder" target="_blank">0 0 0</a>
+  </div>
 
-<body>
+
   ​
 </body>
 ​
