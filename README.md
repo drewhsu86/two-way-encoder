@@ -10,7 +10,7 @@ One way to shuffle indices is with an algorithm like Fisher-Yates. But in order 
 
 ## Proposed method: use irrational numbers' repeating decimals
 
-    One way is to operate on the irrational numbers and only pick 2 of the digits at a time, going down powers of 100 (two powers of 10 at a time) given 3 dials that are each integers 0 through 9 meet the following requirements:
+One way is to operate on the irrational numbers and only pick 2 of the digits at a time, going down powers of 100 (two powers of 10 at a time) given 3 dials that are each integers 0 through 9 meet the following requirements:
   * 0-0-0 produces an array of all 00, or 0 (so the number can be zero or maybe an int)
   * Works best if the number is greater than 1, so we know irrational trailing decimals will happen at right after the decimal point
   * Let numbers irrational such as e = eulers number, pi = circle's circumference/diameter
